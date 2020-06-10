@@ -25,6 +25,8 @@ Multi-scale Discriminative Location-aware model Architecture.
 
 ## Training MDL model
 
+Run the traing script:
+
     ```
     sudo chmod u+x train.sh
     ./train.sh
@@ -32,13 +34,34 @@ Multi-scale Discriminative Location-aware model Architecture.
 
 ## Testing MDL model
 
+Test the models in one-shot/few-shot setting:
 
+    ```
+    cd ${HOME}/MDL_FSL/semantic_segmentation
+    python test.py deploy_1shot.prototxt ${TRAINED_MODEL} ${RESULTS_PATH} 1000 fold${FOLD_ID}_1shot_test
+    ```
+    
+Where ${FOLD_ID} can be 0,1,2, or 3 and ${TRAIN_MODEL} is the path to the trained caffe model. Please note that we have included different caffe models for each ${FOLD_ID}.
+
+Simillarly, run the following to test the models in 5-shot setting:
+
+    ```
+    cd ${HOME}/MDL_FSL/semantic_segmentation
+    python test.py deploy_5shot.prototxt ${TRAINED_MODEL} ${RESULTS_PATH} 1000 fold${FOLD_ID}_5shot_test
+    ```
 
 ## Acknowledgment and Citations
 
 This code is based on OSLSM. Thanks to the contributors of OSLSM.
 
+	@inproceedings{shaban2017one,
+	  title={One-Shot Learning for Semantic Segmentation},
+	  author={Shaban, Amirreza and Bansal, Shray and Liu, Zhen and Essa, Irfan and Boots, Byron},
+	  booktitle={arXiv preprint arXiv:1709.03410},
+	  year={2017}
+	}
 
+This is the implementation of MDL model, please consider citing our paper:
 
 	@inproceedings{dong2019surface,
 	  title={Multi-scale discriminative location-aware network for few-shot semantic segmentation},
