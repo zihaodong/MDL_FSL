@@ -13,7 +13,9 @@ Multi-scale Discriminative Location-aware model Architecture.
 
 ## Illustration
 
-Build Caffe before using this source code.
+1. 
+
+2. Put this project folder on the Caffe path, then build Caffe before using this source code.
 
 ## Training MDL model
 
