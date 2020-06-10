@@ -13,13 +13,22 @@ Multi-scale Discriminative Location-aware model Architecture.
 
 ## Illustration
 
-1. 
+1. Download and clone OSLSM source code:
 
-2. Put this project folder on the Caffe path, then build Caffe before using this source code.
+    ```
+    git clone https://github.com/lzzcd001/OSLSM.git
+    ```
+
+2. Put this project folder on the OSLSM path, then build Caffe before using this source code.
+
+3. Complete the configuration and data pre-processing according to the OSLSM instruction.
 
 ## Training MDL model
 
-
+    ```
+    sudo chmod u+x train.sh
+    ./train.sh
+    ```
 
 ## Testing MDL model
 
