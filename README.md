@@ -7,13 +7,12 @@ support image-label pair, which adjusts the weight of the query image segmentati
 
 ## The Struction of MDL model
 
-
-
+Multi-scale Discriminative Location-aware model Architecture.
+[]!(MDL_arch.png)
 
 ## Illustration
 
-
-
+Build Caffe before using this source code.
 
 ## Training MDL model
 
